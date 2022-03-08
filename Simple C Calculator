@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+float Somme (float x, float y) { return x+y;}
+float Soustraction (float x, float y) { return x-y;}
+float Produit (float x, float y) { return x*y;}
+float Quotiant (float x, float y) { return x/y;}
+float Racine_carre(float x) { return sqrt(x);}
+float Puissance (float x, float y)
+{
+    float z;
+    z= pow(x, y);
+    return z;
+} //** x^y **//
+
+
+int main () {
+float x,y,z;
+int a;
+printf("================ Calculatrice ==================== \n**********************************************\n");
+printf("############# Hello ! ############# \n\n");
+printf(" 1. Somme                    2. Soustraction\n\n 3. Produit                  4. Quotiant\n\n");
+printf(" 5. La puissance             6. La Racine\n\n");
+printf("Give me x\n");
+scanf("%f", &x);
+printf("Give me y\n\n");
+scanf("%f", &y);
+printf("Choose your operation: \n");
+scanf("%d", &a);
+switch (a){
+case (1): {
+    z=Somme(x,y);
+    printf("%f\n", z);
+          }
+          break;
+case (2):{
+    z= Soustraction(x,y);
+    printf("%f\n", z);
+          }
+          break;
+case (3):{
+    z=Produit(x,y);
+    printf("%f\n", z);
+          }
+          break;
+case (4):{
+    z= Quotiant (x,y);
+    if (y=0)
+    printf("z is not define"); else
+    printf("%f\n", z);
+          }
+          break;
+case (5):{
+    z= pow(x,y);
+    printf("%f\n", z);
+          }
+          break;
+case (6): {
+    z= sqrt(x);
+    if (x<0)
+    printf("z is not define"); else
+    printf("%f\n",z);
+          }
+          break;
+default: printf("there is no this service \n\n");}
+
+return 0;
+}
